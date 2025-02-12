@@ -1,0 +1,17 @@
+type Props = {
+  url: string;
+};
+
+export default function YoutubeEmbed({ url }: Props) {
+  return (
+    <div className="relative overflow-hidden">
+      <iframe
+        className="w-full h-96 md:h-[680px]"
+        src={url}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded youtube"
+      />
+    </div>
+  );
+}
