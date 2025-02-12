@@ -1,17 +1,16 @@
+import dynamic from 'next/dynamic';
+import ReactPlayer from 'react-player';
+
 type Props = {
   url: string;
 };
 
-export default function YoutubeEmbed({ url }: Props) {
+function YoutubeEmbed({ url }: Props) {
   return (
-    <div className="relative overflow-hidden">
-      <iframe
-        className="w-full h-96 md:h-[680px]"
-        src={url}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded youtube"
-      />
+    <div className="flex justify-center items-center">
+      <ReactPlayer url={url} />
     </div>
   );
 }
+
+export default dynamic(() => Promise.resolve(YoutubeEmbed), { ssr: false });

@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import Image from 'next/image';
-import Text from 'components/blocks/Text';
 import AnchorLink from 'components/blocks/AnchorLink';
 import CodeBlock from 'components/blocks/CodeBlock';
+import Text from 'components/blocks/Text';
+import Image from 'next/image';
+import { Fragment } from 'react';
 
 export function renderBlocks(block) {
   const { type, id } = block;
