@@ -12,6 +12,6 @@ const siteData = {
   twitter: 'https://github.com/fuwhis/notion-javascript-blog',
   websiteUrl: 'https://nextjs-notion-blog-starter.vercel.app',
   linkedin: 'https://github.com/fuwhis/notion-javascript-blog'
-}
+};
 
-export default siteData
+export default siteData;

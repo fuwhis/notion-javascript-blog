@@ -2,8 +2,8 @@
   "private": true,
   "description": "Notion-powered blog starter with Nextjs and Tailwind",
   "repository": "https://github.com/tuanphungcz/nextjs-notion-blog-starter",
-  "homepage": "https://nextjs-notion-blog-starter.vercel.app/",
-  "author": "QuyNg <fuwhis.az>",
+  "homepage": "https://fuwhis.github.io/notion-javascript-blog/",
+  "author": "Fuwhis <fuwhis.dev>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -13,13 +13,15 @@
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "yarn build && gh-pages -d out"
   },
   "dependencies": {
     "@notionhq/client": "^0.4.13",
     "@tabler/icons": "^1.119.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "canvas-confetti": "^1.9.2",
+    "chrome-aws-lambda": "^10.1.0",
     "classnames": "^2.5.1",
     "copy-to-clipboard": "^3.3.3",
     "next": "^12.3.4",
