@@ -5,7 +5,8 @@
 // assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
 
 module.exports = {
-  output: 'export' && 'standalone',
+  output: 'export',
+  basePath: '/notion-Javascript-blog',
   distDir: 'out',
   images: {
     unoptimized: true,
