@@ -1,12 +1,12 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/api/og-image": "pages/api/og-image.js",
-  "/api/subscribe-convertkit": "pages/api/subscribe-convertkit.js",
-  "/_error": "pages/_error.js",
   "/og": "pages/og.html",
-  "/sitemap.xml": "pages/sitemap.xml.js",
+  "/api/subscribe-convertkit": "pages/api/subscribe-convertkit.js",
   "/": "pages/index.js",
+  "/sitemap.xml": "pages/sitemap.xml.js",
   "/blog/[slug]": "pages/blog/[slug].js",
   "/404": "pages/404.html"
 }
