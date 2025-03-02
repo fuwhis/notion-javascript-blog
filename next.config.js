@@ -6,7 +6,7 @@
 
 module.exports = {
   output: 'export',
-  basePath: '/notion-Javascript-blog',
+  basePath: '/notion-javascript-blog',
   distDir: 'out',
   images: {
     unoptimized: true,
