@@ -1,13 +1,13 @@
 {
   "private": true,
   "description": "Notion-powered blog starter with Nextjs and Tailwind",
-  "repository": "https://github.com/fuwhis/notion-Javascript-blog",
+  "repository": "https://github.com/fuwhis/notion-javascript-blog",
   "homepage": "https://fuwhis.github.io/notion-javascript-blog/",
   "author": "Fuwhis<fuwhis.dev>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
