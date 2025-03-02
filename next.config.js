@@ -5,8 +5,8 @@
 // assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
 
 module.exports = {
-  output: 'export',
-  distDir: 'dist',
+  output: 'export' && 'standalone',
+  distDir: 'out',
   images: {
     unoptimized: true,
     domains: [
