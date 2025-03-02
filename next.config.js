@@ -1,12 +1,10 @@
-// const isProduction = process.env.NODE_ENV === 'production';
-// const REPO_NAME = 'notion-javascript-blog';
-
-// basePath: isProduction ? `/${REPO_NAME}` : '',
-// assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
+const isProduction = process.env.NODE_ENV === 'production';
+const REPO_NAME = 'notion-javascript-blog';
 
 module.exports = {
   output: 'export',
-  basePath: '/notion-javascript-blog',
+  assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
+  basePath: isProduction ? `/${REPO_NAME}` : '',
   distDir: 'out',
   images: {
     unoptimized: true,
