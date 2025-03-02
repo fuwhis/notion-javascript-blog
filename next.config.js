@@ -1,11 +1,11 @@
-const isProduction = process.env.NODE_ENV === 'production';
-console.log(isProduction);
-const REPO_NAME = 'notion-javascript-blog';
+// const isProduction = process.env.NODE_ENV === 'production';
+// const REPO_NAME = 'notion-javascript-blog';
+
+// basePath: isProduction ? `/${REPO_NAME}` : '',
+// assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
 
 module.exports = {
   output: 'export',
-  basePath: isProduction ? `/${REPO_NAME}` : '',
-  assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
   images: {
     unoptimized: true,
     domains: [
