@@ -14,7 +14,7 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "lint": "next lint",
-    "deploy": "rm -rf out && yarn build && gh-pages -d out"
+    "deploy": "rm -rf out && yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "@notionhq/client": "^0.4.13",
