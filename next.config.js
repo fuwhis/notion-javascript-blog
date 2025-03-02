@@ -1,12 +1,12 @@
 const isProduction = process.env.NODE_ENV === 'production';
-const repoName = 'notion-javascript-blog';
+const REPO_NAME = 'notion-javascript-blog';
 
 module.exports = {
   output: 'export',
+  basePath: isProduction ? `/${REPO_NAME}` : '',
+  assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
   images: {
     unoptimized: true,
-    basePath: isProduction ? `/${repoName}` : '',
-    assetPrefix: isProduction ? `/${repoName}/` : '',
     domains: [
       's3.us-west-2.amazonaws.com', // Images coming from Notion
       'via.placeholder.com', // for articles that do not have a cover image
