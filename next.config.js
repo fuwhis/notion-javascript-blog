@@ -1,4 +1,5 @@
 const isProduction = process.env.NODE_ENV === 'production';
+console.log(isProduction);
 const REPO_NAME = 'notion-javascript-blog';
 
 module.exports = {
