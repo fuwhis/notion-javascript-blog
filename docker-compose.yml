@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      target: ${NODE_ENV:-development}
+      args:
+        - NOTION_SECRET=${NOTION_SECRET}
+        - BLOG_DATABASE_ID=${BLOG_DATABASE_ID}
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - NOTION_SECRET=${NOTION_SECRET}
+      - BLOG_DATABASE_ID=${BLOG_DATABASE_ID}
+    volumes:
+      - .:/app:delegated
+      # Anonymous volume to prevent overwriting node_modules with host directory
+      - /app/node_modules
+      - /app/.next
+    command: ${COMMAND:-yarn dev}
+    # Add healthcheck
+    healthcheck:
+      test: ['CMD', 'wget', '-q', '--spider', 'http://localhost:3000']
+      interval: 30s
+      timeout: 10s
+      retries: 3

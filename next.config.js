@@ -5,7 +5,6 @@ module.exports = {
   output: 'standalone',
   assetPrefix: isProduction ? `/${REPO_NAME}/` : '',
   basePath: isProduction ? `/${REPO_NAME}` : '',
-  distDir: 'out',
   images: {
     unoptimized: true,
     domains: [
@@ -20,5 +19,9 @@ module.exports = {
       'nextjs-notion-blog-starter.vercel.app',
       'prod-files-secure.s3.us-west-2.amazonaws.com'
     ]
+  },
+  env: {
+    NOTION_SECRET: process.env.NOTION_SECRET,
+    NOTION_DATABASE_ID: process.env.NOTION_DATABASE_ID
   }
 };
